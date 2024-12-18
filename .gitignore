@@ -32,17 +32,6 @@ ipch/
 *.o
 *.obj
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
 # Executables
 *.exe
 *.out
@@ -60,3 +49,8 @@ Thumbs.db
 # Clangd cache
 .cache/
 .clangd/
+
+# Exception for library files
+!libs/**/*.lib
+!libs/**/*.dll
+!libs/**/*.a
