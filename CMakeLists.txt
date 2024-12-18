@@ -16,7 +16,7 @@ set(CMAKE_GENERATOR_TOOLSET "v143")
 set(CMAKE_VS_PLATFORM_TOOLSET "v143")
 set(CMAKE_GENERATOR_PLATFORM "x64")
 
-project(shader_prac)
+project(gamengine_boilerplate)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
