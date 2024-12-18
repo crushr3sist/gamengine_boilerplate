@@ -74,6 +74,12 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     ${GLFW_LIBRARY}
 )
 
+add_custom_command(TARGET ${PROJECT_NAME} PRE_BUILD
+COMMAND ${CMAKE_COMMAND} -E remove_directory "${CMAKE_BINARY_DIR}/CMakeFiles"
+COMMAND ${CMAKE_COMMAND} -E remove "${CMAKE_BINARY_DIR}/*.cmake"
+COMMAND ${CMAKE_COMMAND} -E remove "${CMAKE_BINARY_DIR}/CMakeCache.txt"
+)
+
 # Copy DLL to output directory
 add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_if_different

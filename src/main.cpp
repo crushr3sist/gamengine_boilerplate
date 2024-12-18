@@ -24,7 +24,7 @@ out vec4 FragColor;
 
 void main()
 {
-    FragColor = vec4(ourColor, 1.0);
+    FragColor = vec4(ourColor, 2.0);
 }
 )";
 
@@ -122,8 +122,8 @@ int main() {
   glEnableVertexAttribArray(0);
 
   // Color attribute
-  glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float),
-                        (void *)(3 * sizeof(float)));
+  glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 4 * sizeof(float),
+                        (void *)(6 * sizeof(float)));
   glEnableVertexAttribArray(1);
 
   // Unbind the VBO and VAO
